@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>uppercase</title>
+  </head>
+  <style>
+    input {
+      height: 50px;
+      width: 500px;
+      font-size: 30px;
+    }
+    p {
+      text-decoration: underline;
+      font-size: 30px;
+      color: rgb(63, 63, 246);
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+  </style>
+  <body>
+    <div style="margin: 200px" class="hero">
+      <p><b>Enter Your Text:</b></p>
+      <input type="text" id="textInput" oninput="convertToUppercase()" />
+      <p><b>Here Your Capitalized text ---</b></p>
+      <input type="text" id="uppercaseOutput" disabled />
+    </div>
+  </body>
+
+  <script type="text/javascript" language="javascript">
+    function convertToUppercase() {
+      var inputElement = document.getElementById("textInput");
+      var outputElement = document.getElementById("uppercaseOutput");
+      outputElement.value = inputElement.value.toUpperCase();
+    }
+  </script>
+</html>
